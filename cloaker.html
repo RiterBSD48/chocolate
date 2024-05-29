@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cloaker </title>
+        <style>
+p {
+  color: white;
+  font-family: serif
+}
+h1 {
+   color: white;
+   text-align: center;
+   font-family: serif;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-family: serif;
+}
+body {
+   background-color: black;
+}
+button {
+       background-color: #3A3A3A;
+       border-radius: 12px;
+       padding: 14px 40px;
+}
+  </style>
+    </head>
+    <body>
+        <script>
+        function create() {
+            var url = document.getElementById('input').value;
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+        </script>
+        <input type="text" value="3kh0-probably.github.io/megalovania" 
+          placeholder="3kh0-probably.github.io/megalovania" id='input' autofocus>
+        <button onclick='create()'>Cloak</button>
+    </body>
+</html>
